@@ -10,6 +10,9 @@ namespace oefening_1
             HexDisplay hexDisplay = new HexDisplay();
             BinaryDisplay binaryDisplay = new BinaryDisplay();
 
+            nKeeper.AddObserver(hexDisplay);
+            nKeeper.AddObserver(binaryDisplay);
+
             var menu = new SMUtils.Menu();
             menu.AddOption('1', "Enter Number", () => {
                 try
