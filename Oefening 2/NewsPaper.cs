@@ -13,9 +13,9 @@ namespace Oefening_2
             this.name = name;
         }
 
-        public void Update(string message)
+        public void Update(NewsTypes type, string message)
         {
-            Console.WriteLine("Mews from " + name + ": " + message);
+            Console.WriteLine(type.ToString() +  " news from " + name + ": " + message);
         }
     }
 }

@@ -15,17 +15,17 @@ namespace Oefening_2
 
         public void PublishEconomicNews(string message)
         {
-            UpdateObservers(message);
+            UpdateObservers(NewsTypes.Economic, message);
         }
 
         public void PublishPoliticalNews(string message)
         {
-            UpdateObservers(message);
+            UpdateObservers(NewsTypes.Political, message);
         }
 
         public void PublishTechNews(string message)
         {
-            UpdateObservers(message);
+            UpdateObservers(NewsTypes.Tech, message);
         }
 
         public void RemoveObserver(IObserver observer)
@@ -33,11 +33,11 @@ namespace Oefening_2
             observers.Remove(observer);
         }
 
-        public void UpdateObservers(string message)
+        public void UpdateObservers(NewsTypes type, string message)
         {
             for (int i = observers.Count - 1; i >= 0; i--)
             {
-                observers[i].Update(message);
+                observers[i].Update(type, message);
             }
         }
     }

@@ -8,6 +8,6 @@ namespace Oefening_2
     {
         void AddObserver(IObserver observer);
         void RemoveObserver(IObserver observer);
-        void UpdateObservers(string message);
+        void UpdateObservers(NewsTypes type, string message);
     }
 }

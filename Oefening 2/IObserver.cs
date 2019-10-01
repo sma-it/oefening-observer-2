@@ -6,6 +6,6 @@ namespace Oefening_2
 {
     interface IObserver
     {
-        void Update(string message);
+        void Update(NewsTypes type, string message);
     }
 }
