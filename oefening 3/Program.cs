@@ -16,8 +16,9 @@ namespace oefening_3
 
             menu.AddOption('1', "Buy Dog", () =>
             {
-                Console.WriteLine("You bought a dog");
-                var animal = new Dog();
+                Console.Write("Enter the name of your new dog: ");
+                string name = Console.ReadLine();
+                var animal = new Dog(name);
                 animal.AddObserver(dogLover);
                 animal.AddObserver(animalLover);
                 animals.Add(animal);
@@ -25,8 +26,9 @@ namespace oefening_3
 
             menu.AddOption('2', "Buy Cat", () =>
             {
-                Console.WriteLine("You bought a cat");
-                var animal = new Cat();
+                Console.Write("Enter the name of your new cat: ");
+                string name = Console.ReadLine();
+                var animal = new Cat(name);
                 animal.AddObserver(catLover);
                 animal.AddObserver(animalLover);
                 animals.Add(animal);

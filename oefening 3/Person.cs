@@ -13,9 +13,9 @@ namespace oefening_3
             this.name = name;
         }
 
-        public void Update(AnimalType type)
+        public void Update(AnimalType type, string name)
         {
-            Console.WriteLine(this.name + " heard a " + type.ToString());
+            Console.WriteLine(this.name + " heard " + name + " make a sound");
         }
     }
 }

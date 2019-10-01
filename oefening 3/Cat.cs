@@ -7,6 +7,12 @@ namespace oefening_3
     class Cat : IAnimal, ISubject
     {
         List<IObserver> observers = new List<IObserver>();
+        string name;
+
+        public Cat(string name)
+        {
+            this.name = name;
+        }
 
         public void AddObserver(IObserver observer)
         {
@@ -28,7 +34,7 @@ namespace oefening_3
         {
             for (int i = observers.Count - 1; i >= 0; i--)
             {
-                observers[i].Update(AnimalType.Cat);
+                observers[i].Update(AnimalType.Cat, name);
             }
         }
     }

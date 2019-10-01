@@ -6,6 +6,6 @@ namespace oefening_3
 {
     interface IObserver
     {
-        void Update(AnimalType type);
+        void Update(AnimalType type, string name);
     }
 }
