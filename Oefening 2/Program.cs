@@ -8,11 +8,13 @@ namespace Oefening_2
         {
             NewsAgency Belga = new NewsAgency();
 
-            NewsPaper Standaard = new NewsPaper("Standaard");
-            NewsPaper NYTimes = new NewsPaper("New York Times");
+            NewsPaper Standaard = new StandaardPaper();
+            NewsPaper NYTimes = new TimesPaper();
+            NewsPaper Politico = new Politico();
 
             Belga.AddObserver(Standaard);
             Belga.AddObserver(NYTimes);
+            Belga.AddObserver(Politico);
 
             var menu = new SMUtils.Menu();
             menu.AddOption('1', "Add Economic News", () =>
