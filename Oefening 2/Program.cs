@@ -11,6 +11,9 @@ namespace Oefening_2
             NewsPaper Standaard = new NewsPaper("Standaard");
             NewsPaper NYTimes = new NewsPaper("New York Times");
 
+            Belga.AddObserver(Standaard);
+            Belga.AddObserver(NYTimes);
+
             var menu = new SMUtils.Menu();
             menu.AddOption('1', "Add Economic News", () =>
             {
